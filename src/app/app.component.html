@@ -12,6 +12,11 @@
         <li>Simply output Odd - NUMBER or Even - NUMBER in the two components</li>
         <li>Style the element (e.g. paragraph) holding your output text differently in both components</li>
       </ol>
+      <hr>
+      <!-- <router-outlet></router-outlet> -->
+      <app-game-control (counterStarted)="onCounterStarted($event)"></app-game-control>
+      <app-odd *ngFor="let o of odd" [number]="o"></app-odd>
+      <app-even *ngFor="let e of even" [number]="e"></app-even>
     </div>
   </div>
 </div>
